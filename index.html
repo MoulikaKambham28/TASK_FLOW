@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Productivity Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>🚀 TaskFlow</h1>
+    <p>Smart Productivity Management System</p>
+
+    <button id="themeBtn">🌙 Dark Mode</button>
+</header>
+
+
+<div class="container">
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>Total Tasks</h3>
+            <span id="totalTasks">0</span>
+        </div>
+
+
+        <div class="card">
+            <h3>Completed</h3>
+            <span id="completedTasks">0</span>
+        </div>
+
+
+        <div class="card">
+            <h3>Pending</h3>
+            <span id="pendingTasks">0</span>
+        </div>
+
+    </section>
+
+
+    <!-- Add Task -->
+
+    <section class="task-box">
+
+        <h2>Add New Task</h2>
+
+        <input 
+        type="text" 
+        id="taskInput"
+        placeholder="Enter your task">
+
+
+        <select id="category">
+
+            <option>Study</option>
+            <option>Work</option>
+            <option>Personal</option>
+
+        </select>
+
+
+        <select id="priority">
+
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+
+        </select>
+
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+
+    </section>
+
+
+
+    <!-- Search -->
+
+    <input 
+    id="search"
+    class="search"
+    placeholder="Search tasks..."
+    onkeyup="displayTasks()">
+
+
+
+    <!-- Task List -->
+
+
+    <section>
+
+        <h2>Your Tasks</h2>
+
+        <div id="taskList"></div>
+
+    </section>
+
+
+
+    <!-- Chart -->
+
+    <section class="chart">
+
+        <h2>Task Progress</h2>
+
+        <canvas id="taskChart"></canvas>
+
+    </section>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
